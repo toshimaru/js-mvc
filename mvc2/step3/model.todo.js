@@ -21,6 +21,10 @@
     this.trigger('add', todo);
   };
 
+  Todo.setCompleteAll = function() {
+    Todo.list.forEach(function(todo) { todo.setComplete(true); });
+  };
+
   // 外部に公開
   window.Todo = Todo;
 
